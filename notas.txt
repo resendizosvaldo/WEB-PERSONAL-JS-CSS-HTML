@@ -1,0 +1,133 @@
+          <div class="courses__card">
+            <img
+              src="src/assets/curso__website_desde_cero.png"
+              alt="Curso CSS3 AlexCG Design"
+              class="courses__img"
+            />
+            <div class="courses__texts">
+              <h3 class="courses__title">Curso Básico de CSS3</h3>
+              <p class="courses__copy">
+                ¿Ya sabes HTML5 y te gustaría comenzar con CSS3?,
+                <strong
+                  >¡Perfecto! si deseas aprender lo esencial de CSS3 Este curso
+                  es para ti.</strong
+                >
+                En este curso aprenderás lo esencial que cualquiera debe conocer
+                en CSS3, [Box model, Selectores, Herencia, Cascada,
+                Especificidad, Sombras y más]
+              </p>
+              <a
+                href="https://youtu.be/LzlarZAtMYI"
+                target="_blank"
+                class="courses__cta"
+                >¡Quiero aprender CSS3!</a
+              >
+            </div>
+          </div>
+          <div class="courses__card">
+            <img
+              src="src/assets/curso__website_desde_cero.png"
+              alt="Crea una página web desde cero con HTML y CSS"
+              class="courses__img"
+            />
+            <div class="courses__texts">
+              <h3 class="courses__title">Página web con HTML5 y CSS3</h3>
+              <p class="courses__copy">
+                En este curso aprenderás como crear una página web desde cero,
+                con HTML5 y CSS3. La página que crearemos no tendrá ningún
+                plugin ni libreria, será hecha con Vanilla CSS (CSS PURO). Esto
+                lo haremos con CSS GRID y Flexbox.
+              </p>
+              <a
+                href="https://youtu.be/gxWCAzrx3pQ"
+                class="courses__cta"
+                target="_blank"
+                >¡Quiero crear esta página web!</a
+              >
+            </div>
+          </div>
+          <div class="courses__card">
+            <img
+              src="src/assets/curso__website_desde_cero.png"
+              alt="Curso Figma desde cero AlexCG Design"
+              class="courses__img"
+            />
+            <div class="courses__texts">
+              <h3 class="courses__title">Curso Figma desde Cero</h3>
+              <p class="courses__copy">
+                Figma es una herramienta de creación de prototipos para nuestros
+                sitios web. Pero Figma también nos sirve para crear diseños
+                increibles con CSS, además de adentrarnos más al mundo de la
+                maquetación web.
+                <strong
+                  >Sin duda Figma es una herramienta que debes saber
+                  manejar.</strong
+                >
+              </p>
+              <a
+                href="https://youtu.be/SqO_-olNvnU"
+                target="_blank"
+                class="courses__cta"
+                >¡Quiero aprender Figma!</a
+              >
+            </div>
+          </div>
+          <div class="courses__card">
+            <img
+              src="src/assets/curso__website_desde_cero.png"
+              alt="Curso Figma desde cero AlexCG Design"
+              class="courses__img"
+            />
+            <div class="courses__texts">
+              <h3 class="courses__title">Curso Figma desde Cero</h3>
+              <p class="courses__copy">
+                Figma es una herramienta de creación de prototipos para nuestros
+                sitios web. Pero Figma también nos sirve para crear diseños
+                increibles con CSS, además de adentrarnos más al mundo de la
+                maquetación web.
+                <strong
+                  >Sin duda Figma es una herramienta que debes saber
+                  manejar.</strong
+                >
+              </p>
+              <a
+                href="https://youtu.be/SqO_-olNvnU"
+                target="_blank"
+                class="courses__cta"
+                >¡Quiero aprender Figma!</a
+              >
+            </div>
+          </div>
+          <div class="courses__card">
+            <img
+              src="src/assets/curso__website_desde_cero.png"
+              alt="Curso Figma desde cero AlexCG Design"
+              class="courses__img"
+            />
+            <div class="courses__texts">
+              <h3 class="courses__title">Curso Figma desde Cero</h3>
+              <p class="courses__copy">
+                Figma es una herramienta de creación de prototipos para nuestros
+                sitios web. Pero Figma también nos sirve para crear diseños
+                increibles con CSS, además de adentrarnos más al mundo de la
+                maquetación web.
+                <strong
+                  >Sin duda Figma es una herramienta que debes saber
+                  manejar.</strong
+                >
+              </p>
+              <a
+                href="https://youtu.be/SqO_-olNvnU"
+                target="_blank"
+                class="courses__cta"
+                >¡Quiero aprender Figma!</a
+              >
+            </div>
+          </div>
+
+          Forzar tu sitio a cargar de forma segura con un archivo .htaccess
+
+          RewriteEngine On
+          RewriteCond %{HTTPS} !=on
+          RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+          Header always set Content-Security-Policy "upgrade-insecure-requests;"

@@ -1,0 +1,739 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap');
+
+*{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --container-padding:80px 0; 
+    --color-primary: #1871A3;
+    --color-secondary: #2b5577;
+    --url-img: url("../assets/header-alexcg-design.jpg");
+    --close: none;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.modal{
+    min-height: 500px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .7s;
+    transform: scale(0);
+    top: 0;
+    z-index: 10000;
+}
+
+.modal__show{
+    transform: scale(1);
+}
+
+.modal__out{
+    transition: transform .5s;
+    transform: translate(150%, 150%);
+}
+
+.modal__container{
+    max-width: 1200px;
+    width: 90%;
+    height: 90%;
+    position: relative;
+    /* height: 90%; */
+    background: #f2f2f2;
+    color: #000;
+    border-radius: 30px;
+}
+
+.modal__grid{
+    display: grid;
+    width: 95%;
+    height: 100%;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+}
+
+.modal__title{
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+
+.modal__paragraph{
+    line-height: 1.5;
+}
+
+.modal__link{
+   color: #6762A6;
+   font-weight: bold;
+}
+
+
+.modal__cta{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 20px 30px;
+    background: #6762A6;
+    color: #fff;
+    text-decoration: none;
+}
+
+.modal__arrow{
+    position: absolute;
+    top: 0;
+    right: -70px;
+    width: 60px;
+    fill: #6762A6;
+    animation: animate 1s infinite alternate ;
+
+}
+
+@keyframes animate{
+    to{
+        transform: translateX(5%);
+
+    }
+}
+
+.modal__img{
+    width: 95%;
+}
+
+.modal__close{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: tomato;
+    border-radius: 50%;
+    fill: #fff;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    
+}
+
+.container{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    padding: var(--container-padding);
+}
+
+.hero{
+    margin-top: 70px;
+    --container-padding:0;
+    height: calc(100vh - 70px);
+    background: var(--url-img);
+    background: -webkit-linear-gradient(to right, rgba(55, 59, 68, 0.609), rgba(66, 134, 244, 0.616)), var(--url-img);
+    background: linear-gradient(to right, rgba(55, 59, 68, 0.603), rgba(66, 134, 244, 0.603)), var(--url-img);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+.nav{
+    background: rgba(248, 248, 248, 1);
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    z-index: 10;
+}
+
+
+.nav__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+}
+
+
+.nav__img{
+    height: inherit;
+    display: block;
+}
+
+.nav__picture{
+    height: 70px;
+    display: block;
+    object-fit: cover;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: #1871A3;
+    margin-left: 40px;
+}
+
+.nav__icon{
+    width: 40px;
+    display: none;
+}
+
+
+
+.hero__main{
+    height: calc(100vh - 70px);
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.hero__title{
+    font-size: 4rem;
+    margin: 0;
+}
+
+.hero__copy{
+    font-size: 2rem;
+    margin: .8em 0;
+}
+
+.hero__cta{
+    display: inline-block;
+    border: 2px solid #fff;
+    /* background: #fff; */
+    text-decoration: none;
+    padding: 20px 30px;
+    border-radius: .5em;
+    color: #fff;
+    font-weight: bold;
+}
+
+.hero__cta:hover{
+   background: #fff;
+   color: var(--color-primary);
+}
+
+.nav__close{
+    display: var(--close);
+}
+
+.title{
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+
+/* section about */
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+.about__person{
+    text-align: center;
+    flex-basis: 70%;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+.about__quote{
+    position: absolute;
+    left: 0;
+    top:-25px;
+    /* top: 0; */
+    /* left: 20px; */
+    z-index:5;
+    fill: rgb(108, 154, 240);
+    opacity: .2;
+    width: 50px;
+    height: 50px;
+}
+
+.about__alex{
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    object-position:top center;
+    border-radius: 50%;
+}
+
+.about__picture{
+    flex-basis: 40%;
+    text-align: center;
+    margin: 0;
+}
+
+.about__img{
+    max-width: 100%;
+    vertical-align: top;
+}
+
+.about__copy{
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.7;
+    position: relative;
+}
+
+.courses{
+    background: #f2f2f2;
+}
+
+.courses__copy{
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.courses__section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    gap: 40px 20px;
+    align-items: end;
+    grid-auto-rows: 1fr;
+}
+
+.courses__card{
+    width: 99%;
+    height: 100%;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.courses__img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.courses__texts{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    padding: 30px 20px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; */
+}
+
+.courses__title{
+    font-size: 1.5rem;
+    margin: 0 0 20px;
+}
+
+
+.courses__cta{
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+    background: #1871A3;
+    border-radius: .3em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.courses__container--premium{
+    --container-padding: 20px 0 100px;
+}
+
+/* Answer  */
+
+
+.answers__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    /* align-items: baseline; */
+}
+
+.answers__item{
+    width: 97%;
+    margin: 0 auto;
+    background: #2b5577;
+    color: #fff;
+    padding: 30px 20px;
+    border-radius: 5px;
+    /* margin: 0 10px; */
+    /* margin-top: 30px; */
+    /* margin-bottom: 10px; */
+    flex-basis: 45%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.anwsers__question{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.anwser__solution--before::after{
+    content: 'hola@alexcgdesign.com';
+}
+
+/* Hosting */
+
+.hosting{
+    background: #f2f2f2;
+}
+
+.hosting__paragraph{
+    line-height: 1.5;
+}
+
+
+.hosting__cta{
+    font-weight: bold;
+}
+
+strong{
+    color: darkslateblue;
+}
+
+.hosting__cta--container{
+    margin: 20px 0;
+    display: inline-block;
+    background: #1871A3;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 50px;
+    border-radius: 50px;
+}
+
+.footer{
+    background: var(--color-secondary);
+    --container-padding:80px 0 40px;
+}
+
+.footer__container{
+    color:#fff;
+    --color-primary:#fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer__contact{
+    flex-basis: 48%;
+}
+
+.footer__picture{
+    flex-basis: 40%;
+    margin: 0;
+    text-align: center;
+}
+
+.footer__img{
+    max-width: 80%;
+}
+
+
+.footer__social{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer__item{
+    margin-bottom: 10px;
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer__link{
+    text-decoration: none;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.footer__icon{
+    width: 30px;
+    border-radius: 50%;
+    fill: var(--color-secondary);
+}
+
+.footer__copy::after{
+    content: ' 👉 hola@alexcgdesign.com 👈';
+    font-weight: bold;
+}
+
+
+
+.footer__copyright{
+    --container-padding:30px 0; 
+    border-top: 3px solid #fff;
+    text-align: center;
+    color: #fff;
+}
+
+@media screen and (max-width:800px){
+
+    .modal__grid{
+        width: 90%;
+        height: 95%;
+        grid-template-columns:1fr;
+        grid-template-rows: max-content max-content;
+        align-content: space-evenly;
+        gap: 20px;
+        padding:  0;
+        text-align: center;
+    }
+
+    
+
+    .modal__picture{
+        order:-1;
+        text-align: center;
+    }
+
+    .modal__img{
+        width:  40%;
+    }
+
+    .modal__close{
+        width: 35px;
+        height: 35px;
+        top: 15px;
+        right: 15px;       
+    }
+
+    .modal__title{
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .modal__btn{
+        margin-top: 30px;
+        position: relative;
+        background: #000;
+        display:block;
+    }
+
+    .modal__cta{
+        display: block;
+        padding: 20px 30px;
+        text-align: center;
+    }
+    
+    .modal__arrow{
+        display: none;
+        animation: animate 1s infinite paused alternate ;
+    
+    }
+
+    .nav__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: inherit;
+    }
+    
+    
+    .nav__img{
+        height: inherit;
+    }
+    
+    .nav__picture{
+        height: 70px;
+        display: block;
+        object-fit: cover;
+    }
+
+    .nav__links{
+        position: fixed;
+        background: #000;
+        background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        transform-origin: center;
+        clip-path: circle(0% at 50% 50%);
+        transition: clip-path 1s;
+
+    }
+    
+    .nav__link{
+        color: #fff;
+        margin-left: 0;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+    
+    .nav__link--active{
+        clip-path: circle(150% at 50% 50%);
+        --close: block;
+        z-index: 1000;
+    }
+
+    .nav__close{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        fill: #667eea;
+        background: #fff;
+        border-radius: 50%;
+    }
+    
+    
+
+    .nav__icon{
+        width: 40px;
+        display: block;
+        cursor: pointer;
+        position: relative;        
+    }
+
+    .about__person{
+        flex-basis: 80%;
+    }
+    
+    
+    
+    .hero__title{
+        font-size: 3rem;
+        margin: 0;
+    }
+    
+    .hero__copy{
+        font-size: 1.5rem;
+        margin: .8em 0;
+    }
+
+    .footer__container{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+
+    .footer__item{
+        justify-content: center;
+    }
+
+    .footer__contact{
+        flex-basis: 48%;
+        width: 90%;
+        margin-top: 30px;
+    }
+    
+    .footer__picture{
+        text-align: center;
+    }
+
+    .footer__img{
+        width: 60%;
+    }
+
+    
+}
+
+@media screen and (max-width:500px){
+    .answers__container{
+       
+        grid-template-columns:minmax(min-content, 1fr);
+        
+    }
+
+    .title{
+        text-align: center;
+    }
+
+    .hosting{
+        text-align: center;
+    }
+
+    .courses__section{
+        grid-template-columns:minmax(250px, 1fr);
+    }
+
+    
+    .about__person{
+        text-align: center;
+        flex-basis: 90%;
+        position: relative;
+        margin: 0 auto;
+    }
+    
+    
+    .about__quote{
+        position: absolute;
+        left: 0px;
+        top:-25px;
+        /* top: 0; */
+        /* left: 20px; */
+        z-index:5;
+        fill: rgb(108, 154, 240);
+        opacity: .2;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .about__alex{
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        object-position:top center;
+        border-radius: 50%;
+    }
+    
+    .about__picture{
+        flex-basis: 40%;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .about__img{
+        max-width: 100%;
+        vertical-align: top;
+    }
+    
+    .about__copy{
+        margin: 0 auto;
+        text-align: left;
+        line-height: 1.7;
+        position: relative;
+    }
+
+    .footer__social{
+        justify-content: space-between;
+    }
+
+    .footer__item{
+        width: 30%;
+        justify-content: center;
+    }
+    
+
+    .footer__img{
+        width: 100%;
+    }
+}
